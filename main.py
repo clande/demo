@@ -6,7 +6,7 @@ from fastapi import FastAPI
 app = FastAPI()
 
 @app.get('/document/load_status')
-def get_load_status():
+async def get_load_status():
     print('loading status')
     x = {"status":"alive"}
     print('loaded status')
